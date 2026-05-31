@@ -1,0 +1,29 @@
+- type: entity
+  parent: [BaseItem, RMCBaseMeleeWeapon]
+  id: RMCWhip
+  name: "chain of command"
+  description: A tool used by great people to placate the frothing masses.
+  components:
+  - type: MeleeWeapon
+    wideAnimationRotation: -135
+    angle: 60
+    attackRate: 1
+    damage:
+      types:
+        Slash: 10
+    soundHit:
+      path: /Audio/Weapons/bladeslice.ogg
+  - type: DamageOtherOnHit
+    damage:
+      types:
+        Slash: 10
+  - type: UsableWhileDevoured
+  - type: Sprite
+    sprite: _RMC14/Objects/Weapons/Melee/whip.rsi
+    state: icon
+  - type: Item
+    size: Normal
+    sprite: _RMC14/Objects/Weapons/Melee/whip.rsi
+  - type: Clothing
+    slots:
+    - belt
